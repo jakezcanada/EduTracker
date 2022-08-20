@@ -1,13 +1,13 @@
 <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxFlexFill>
   <div class="flex-item" fxFlex="50">
-    <form #f="ngForm" (ngSubmit)="onAddScore(f)">
+    <form class="input-container" #f="ngForm" (ngSubmit)="onAddScore(f)">
       <mat-form-field appearance="outline" color="primary" class="score-input-container">
         <mat-label>Score</mat-label>
         <input ngModel required name="score" #score="ngModel" type="number" min="0" max="100" matInput>
       </mat-form-field>
       <button mat-raised-button class="submit-button" type="submit" [disabled]="!f.form.valid || scores.length > 9">Add</button>
     </form>
-    <button mat-raised-button [disabled]="scores.length == 0" (click)="onPredictScore()">Predict My Next Score</button>
+    <button mat-raised-button class="prediction-button" [disabled]="scores.length == 0" (click)="onPredictScore()">Predict My Next Score</button>
     <h1> Your next score: {{ predictedScore.prediction }} </h1>
   </div>
   <div class="flex-item" fxFlex="50">
@@ -15,10 +15,13 @@
       <h1>Your scores (max of 10):</h1>
       <div mat-list-item *ngFor="let score of scores">
         <mat-card class="card-item">
+          <div class="icon-container">
+            <button mat-icon-button class="trash-button" (click)="onRemoveScore(score)">
+              <mat-icon class="icon-display">delete</mat-icon>
+            </button>
+          </div>
           {{ score }}
-          <button mat-icon-button class="trash-button" (click)="onRemoveScore(score)">
-            <mat-icon class="icon-display">delete</mat-icon>
-          </button>
+
         </mat-card>
       </div>
     </mat-nav-list>
