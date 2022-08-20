@@ -8,11 +8,11 @@
       <button mat-raised-button class="submit-button" type="submit" [disabled]="!f.form.valid || scores.length > 9">Add</button>
     </form>
     <button mat-raised-button [disabled]="scores.length == 0" (click)="onPredictScore()">Predict My Next Score</button>
-    <h1> Your next score: {{ predictedScore }} </h1>
+    <h1> Your next score: {{ predictedScore.prediction }} </h1>
   </div>
   <div class="flex-item" fxFlex="50">
     <mat-nav-list>
-      Your scores (max of 10):
+      <h1>Your scores (max of 10):</h1>
       <div mat-list-item *ngFor="let score of scores">
         <mat-card class="card-item">
           {{ score }}
