@@ -1,0 +1,11 @@
+.img-container{
+  margin: 100px;
+  overflow: hidden;
+}
+
+.side-image{
+  width: 40vw;
+  height: 30vw;
+  object-fit: fill;
+}
+

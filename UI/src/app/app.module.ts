@@ -9,10 +9,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PredictionComponent } from './prediction/prediction.component';
 import { AboutComponent } from './about/about.component';
+import { ResourcesComponent } from './resources/resources.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'predict', component: PredictionComponent},
+  {path: 'resources', component: ResourcesComponent},
   {path: 'about', component: AboutComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ]
@@ -22,7 +24,8 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     PredictionComponent,
-    AboutComponent
+    AboutComponent,
+    ResourcesComponent
   ],
   imports: [
     BrowserModule,

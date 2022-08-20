@@ -16,6 +16,12 @@
   flex: 1 1 auto;
 }
 
+.logo {
+  width: 5vw;
+  height: 5vw;
+  object-fit: fill;
+}
+
 .toolbar-button {
   margin: 10px;
 }
