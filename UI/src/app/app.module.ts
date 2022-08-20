@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
@@ -34,6 +35,7 @@ const routes: Routes = [
     MaterialModule,
     FormsModule,
     FlexLayoutModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
