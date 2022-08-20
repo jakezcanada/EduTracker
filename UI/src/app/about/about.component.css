@@ -1,0 +1,25 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+#top {
+    margin: auto;
+}
+
+.example-header-image1 {
+    background-image: url('/assets/lol.png'); 
+    background-size: cover;
+}
+
+.example-header-image2 {
+    background-image: url('smart_boi.jpg'); 
+    background-size: cover;
+}
+
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 200px;
+}
