@@ -9,7 +9,7 @@ export interface PredictionObject {
 @Component({
   selector: 'app-prediction',
   templateUrl: './prediction.component.html',
-  styleUrls: ['./prediction.component.css']
+  styleUrls: ['./prediction.component.scss']
 })
 
 export class PredictionComponent implements OnInit {

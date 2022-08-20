@@ -15,12 +15,18 @@
       <h1>Your scores (max of 10):</h1>
       <div mat-list-item *ngFor="let score of scores">
         <mat-card class="card-item">
-          <div class="icon-container">
-            <button mat-icon-button class="trash-button" (click)="onRemoveScore(score)">
-              <mat-icon class="icon-display">delete</mat-icon>
-            </button>
+          <div fxLayout="row" fxFlexFill>
+            <div fxFlex="50" style="margin: auto; text-align: left;">
+              {{ score }}
+            </div>
+            <div fxFlex="50" class="icon-container">
+              <button mat-icon-button class="trash-button icon-button-small" (click)="onRemoveScore(score)">
+                <mat-icon class="icon-display">delete</mat-icon>
+              </button>
+            </div>
           </div>
-          {{ score }}
+
+
 
         </mat-card>
       </div>
