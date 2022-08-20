@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule } from '../material.module'
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    FlexLayoutModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

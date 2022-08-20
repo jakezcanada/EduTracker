@@ -1,1 +1,18 @@
-<p>prediction works!</p>
+<div class="flex-container" fxLayout="row" fxLayout.xs="column" fxFlexFill>
+  <div class="flex-item" fxFlex="50">
+    <form #f="ngForm" (ngSubmit)="onAddScore(f)">
+      <mat-form-field appearance="outline" color="primary" class="score-input-container">
+        <mat-label>Score</mat-label>
+        <input ngModel name="score" #score="ngModel" type="number" min="0" max="100" matInput>
+      </mat-form-field>
+      <button mat-raised-button class="submit-button" type="submit" [disabled]="!f.form.valid">Add</button>
+    </form>
+  </div>
+  <div class="flex-item" fxFlex="50">
+    <mat-nav-list>
+      <div mat-list-item *ngFor="let score of scores">
+        {{ score }}
+      </div>
+    </mat-nav-list>
+  </div>
+</div>

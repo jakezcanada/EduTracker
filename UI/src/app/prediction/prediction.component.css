@@ -1,0 +1,13 @@
+.flex-container{
+  min-width: 300px;
+  padding:20px;
+}
+
+.flex-item {
+  padding:20px;
+  text-align:center
+}
+
+.submit-button {
+  margin: 30px;
+}
