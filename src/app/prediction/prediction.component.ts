@@ -4,6 +4,7 @@ import {NgForm} from "@angular/forms";
 
 export interface PredictionObject {
   prediction: number;
+  average: number;
 }
 
 @Component({
@@ -14,7 +15,7 @@ export interface PredictionObject {
 
 export class PredictionComponent implements OnInit {
 
-  predictedScore: PredictionObject = { prediction: 0 };
+  predictedScore: PredictionObject = { prediction: 0, average: 0};
   scores: number[] = [];
 
   constructor(private httpClient: HttpClient) { }
@@ -36,7 +37,8 @@ export class PredictionComponent implements OnInit {
   onPredictScore(): void {
     this.httpClient.get('http://edutracker.eastus.cloudapp.azure.com:8000/predict?scores=' + this.scores.toString()).subscribe(data => {
       this.predictedScore = {
-        prediction: (data as any).prediction
+        prediction: (data as any).prediction,
+        average: (data as any).average
       }
     });
   }

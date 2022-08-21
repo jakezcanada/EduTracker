@@ -9,6 +9,7 @@
     </form>
     <button mat-raised-button class="prediction-button" [disabled]="scores.length == 0" (click)="onPredictScore()">Predict My Next Score</button>
     <h1> Your next score: {{ predictedScore.prediction }} </h1>
+    <h1> Your predicted average: {{ predictedScore.average }} </h1>
   </div>
   <div class="flex-item" fxFlex="50">
     <mat-nav-list>
