@@ -16,7 +16,7 @@ body {
 .navbar h1 {
 color: #333;
 position:absolute;
-left: 40px;
+left: 500px;
 }
 
 h1,
@@ -54,211 +54,10 @@ pre {
 }
 .navbar img{
   position: absolute;
-  bottom: 510px;
-  left: 40px;
+  bottom: 565px;
+  left: 915px;
 }
 
-
-/* Showcase */
-.showcase {
-  height: 300px;
-  background-color: var(--primary-color);
-  color: #fff;
-  position: relative;
-}
-
-.showcase img{
-  position: absolute;
-  left: 600px;
-}
-.showcase h1 {
-  font-size: 40px;
-  color:#000000
-}
-
-.showcase p {
-  margin: 10px 0;
-  color: #000000;
-}
-
-.showcase .grid {
-  overflow: visible;
-  grid-template-columns: 55% auto;
-  gap: 800px;
-}
-
-.showcase-text {
-  animation: slideInFromLeft 1s ease-in;
-}
-
-.showcase-form .form-control {
-  margin: 30px 0;
-}
-
-.showcase-form input[type='text'],
-.showcase-form input[type='email'] {
-  border: 0;
-  border-bottom: 1px solid #b4becb;
-  width: 100%;
-  padding: 3px;
-  font-size: 16px;
-}
-
-.showcase-form input:focus {
-  outline: none;
-}
-
-.showcase::before,
-.showcase::after {
-  content: '';
-  position: absolute;
-  height: 100px;
-  bottom: -70px;
-  right: 0;
-  left: 0;
-  background: #fff;
-  transform: skewY(-3deg);
-  -webkit-transform: skewY(-3deg);
-  -moz-transform: skewY(-3deg);
-  -ms-transform: skewY(-3deg);
-}
-
-/* boxes */
-.boxed {
-  border:1px solid;
-  color: #d9d7d7;
-  fill: #000;
-}
-
-/* flip card1 */
-body {
-  font-family: 'Lato', sans-serif;
-}
-
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-  position: absolute;
-  left: 650px;
-  bottom: 250px;
-}
-
-.flip-card-inner {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 80%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: #d5cfde;
-  color: black;
-  transform: rotateY(180deg);
-}
-
-/* flip card 2 */
-.flip-card2 {
-  position: absolute;
-  left: 1000px;
-  bottom: 100px;
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 900px;
-}
-.flip-card2:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* flip card3 */
-.flip-card3 {
-  position: absolute;
-  left: 650px;
-  bottom: -70px;
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 900px;
-}
-.flip-card3:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* button  */
-.flip-card.button {
-  background-color: #9d38c4; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
-
-/* Cli */
-.cli{
-  position: absolute;
-  left: -680px;
-  bottom: 140px;
-
-}
-.cli .grid {
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.cli .grid > *:first-child {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
-}
-
-/* Cloud
-.cloud .grid {
-  grid-template-columns: 4fr 3fr;
-} */
-
-/* Languages */
-
-.languages .flex {
-  flex-wrap: wrap;
-}
-
-.languages .card {
-  text-align: center;
-  margin: 18px 10px 40px;
-  transition: transform 0.2s ease-in;
-}
-
-.languages .card h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.languages .card:hover {
-  transform: translateY(-15px);
-}
 
 /* Features */
 .features-head img,
@@ -691,4 +490,83 @@ body {
   .p-5 {
     padding: 4rem;
   }
- 
+  
+
+/* notetaking */
+.box{
+    width: 100%;
+    height: 100%;
+    margin: 1;
+    padding: 20px;
+    position: absolute;
+    margin-top: 15px;
+    background-color: rgb(226, 219, 219);
+    font-family: 'Lato', sans-serif;
+}
+
+.box h1 {
+    position:absolute;
+    left: 600px;
+    bottom: 720px;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 40%;
+    padding-top: 40px;
+    padding-left: 40px;
+    align-content: center;
+    margin-left: 50px;
+  }
+  
+  .column h2,h3,h4,h5 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px
+
+  }
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .container {
+    position: relative;
+    display: none;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
